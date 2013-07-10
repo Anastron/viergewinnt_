@@ -1,4 +1,5 @@
 #include "viergewinntForm.h"
+#include "Game.h"
 
 
 using namespace System;

@@ -18,10 +18,21 @@
     <ClCompile Include="viergewinntForm.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="viergewinntForm.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="viergewinntForm.resx">
+      <Filter>Ressourcendateien</Filter>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
