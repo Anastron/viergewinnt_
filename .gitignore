@@ -15,3 +15,4 @@
 /Release
 Debug\*
 Release\*
+*.opensdf
