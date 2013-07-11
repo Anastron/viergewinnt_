@@ -2,11 +2,12 @@
 class Game
 {
 private:
-	virtual int choosePlayer(int newGame);
-	
+	bool currPlayer;	
 public:
 	Game(void);
-	virtual int setPlayer(int newGame);
+
+	virtual void switchPlayer();
+	virtual bool getPlayer();
 };
 
 

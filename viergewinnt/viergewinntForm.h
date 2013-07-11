@@ -12,22 +12,17 @@ namespace viergewinnt {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
-	
+
 
 	/// <summary>
 	/// Zusammenfassung für viergewinntForm
 	/// </summary>
-	public ref class viergewinntForm : public System::Windows::Forms::Form
+	public ref class viergewinntForm : public Form
 	{
 		Game *game;
 
 	public:
-		viergewinntForm(void)
-		{
-			InitializeComponent();
-			
-			 game = new Game();
-		}
+		viergewinntForm(void);
 
 	protected:
 		/// <summary>
@@ -57,14 +52,11 @@ namespace viergewinnt {
 	private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape34;
 
 
-
-
 	private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape33;
 
 	private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape32;
 	private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape35;
 	private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape42;
-
 
 
 	private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape39;
@@ -140,7 +132,7 @@ namespace viergewinnt {
 	private: System::Windows::Forms::Button^  surrBtn;
 	private: System::Windows::Forms::Button^  exitBtn;
 	private: System::Windows::Forms::Label^  infoLbn;
-private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
+	private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 
 
 	private:
@@ -230,6 +222,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape29->Location = System::Drawing::Point(29, 243);
 			this->ovalShape29->Name = L"ovalShape29";
 			this->ovalShape29->Size = System::Drawing::Size(40, 40);
+			this->ovalShape29->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape30
 			// 
@@ -239,6 +232,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape30->Location = System::Drawing::Point(79, 243);
 			this->ovalShape30->Name = L"ovalShape30";
 			this->ovalShape30->Size = System::Drawing::Size(40, 40);
+			this->ovalShape30->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape31
 			// 
@@ -248,6 +242,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape31->Location = System::Drawing::Point(129, 243);
 			this->ovalShape31->Name = L"ovalShape31";
 			this->ovalShape31->Size = System::Drawing::Size(40, 40);
+			this->ovalShape31->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape34
 			// 
@@ -257,6 +252,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape34->Location = System::Drawing::Point(279, 243);
 			this->ovalShape34->Name = L"ovalShape34";
 			this->ovalShape34->Size = System::Drawing::Size(40, 40);
+			this->ovalShape34->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape33
 			// 
@@ -266,6 +262,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape33->Location = System::Drawing::Point(229, 243);
 			this->ovalShape33->Name = L"ovalShape33";
 			this->ovalShape33->Size = System::Drawing::Size(40, 40);
+			this->ovalShape33->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape32
 			// 
@@ -275,6 +272,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape32->Location = System::Drawing::Point(179, 243);
 			this->ovalShape32->Name = L"ovalShape32";
 			this->ovalShape32->Size = System::Drawing::Size(40, 40);
+			this->ovalShape32->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape35
 			// 
@@ -284,6 +282,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape35->Location = System::Drawing::Point(329, 243);
 			this->ovalShape35->Name = L"ovalShape35";
 			this->ovalShape35->Size = System::Drawing::Size(40, 40);
+			this->ovalShape35->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape42
 			// 
@@ -293,6 +292,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape42->Location = System::Drawing::Point(329, 193);
 			this->ovalShape42->Name = L"ovalShape42";
 			this->ovalShape42->Size = System::Drawing::Size(40, 40);
+			this->ovalShape42->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape39
 			// 
@@ -302,6 +302,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape39->Location = System::Drawing::Point(179, 193);
 			this->ovalShape39->Name = L"ovalShape39";
 			this->ovalShape39->Size = System::Drawing::Size(40, 40);
+			this->ovalShape39->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape40
 			// 
@@ -311,6 +312,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape40->Location = System::Drawing::Point(229, 193);
 			this->ovalShape40->Name = L"ovalShape40";
 			this->ovalShape40->Size = System::Drawing::Size(40, 40);
+			this->ovalShape40->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape41
 			// 
@@ -320,6 +322,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape41->Location = System::Drawing::Point(279, 193);
 			this->ovalShape41->Name = L"ovalShape41";
 			this->ovalShape41->Size = System::Drawing::Size(40, 40);
+			this->ovalShape41->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape38
 			// 
@@ -329,6 +332,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape38->Location = System::Drawing::Point(129, 193);
 			this->ovalShape38->Name = L"ovalShape38";
 			this->ovalShape38->Size = System::Drawing::Size(40, 40);
+			this->ovalShape38->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape37
 			// 
@@ -338,6 +342,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape37->Location = System::Drawing::Point(79, 193);
 			this->ovalShape37->Name = L"ovalShape37";
 			this->ovalShape37->Size = System::Drawing::Size(40, 40);
+			this->ovalShape37->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape36
 			// 
@@ -347,6 +352,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape36->Location = System::Drawing::Point(29, 193);
 			this->ovalShape36->Name = L"ovalShape36";
 			this->ovalShape36->Size = System::Drawing::Size(40, 40);
+			this->ovalShape36->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape15
 			// 
@@ -356,6 +362,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape15->Location = System::Drawing::Point(29, 343);
 			this->ovalShape15->Name = L"ovalShape15";
 			this->ovalShape15->Size = System::Drawing::Size(40, 40);
+			this->ovalShape15->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape16
 			// 
@@ -365,6 +372,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape16->Location = System::Drawing::Point(79, 343);
 			this->ovalShape16->Name = L"ovalShape16";
 			this->ovalShape16->Size = System::Drawing::Size(40, 40);
+			this->ovalShape16->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape17
 			// 
@@ -374,6 +382,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape17->Location = System::Drawing::Point(129, 343);
 			this->ovalShape17->Name = L"ovalShape17";
 			this->ovalShape17->Size = System::Drawing::Size(40, 40);
+			this->ovalShape17->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape20
 			// 
@@ -383,6 +392,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape20->Location = System::Drawing::Point(279, 343);
 			this->ovalShape20->Name = L"ovalShape20";
 			this->ovalShape20->Size = System::Drawing::Size(40, 40);
+			this->ovalShape20->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape19
 			// 
@@ -392,6 +402,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape19->Location = System::Drawing::Point(229, 343);
 			this->ovalShape19->Name = L"ovalShape19";
 			this->ovalShape19->Size = System::Drawing::Size(40, 40);
+			this->ovalShape19->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape18
 			// 
@@ -401,6 +412,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape18->Location = System::Drawing::Point(179, 343);
 			this->ovalShape18->Name = L"ovalShape18";
 			this->ovalShape18->Size = System::Drawing::Size(40, 40);
+			this->ovalShape18->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape21
 			// 
@@ -410,6 +422,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape21->Location = System::Drawing::Point(329, 343);
 			this->ovalShape21->Name = L"ovalShape21";
 			this->ovalShape21->Size = System::Drawing::Size(40, 40);
+			this->ovalShape21->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape28
 			// 
@@ -419,6 +432,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape28->Location = System::Drawing::Point(329, 293);
 			this->ovalShape28->Name = L"ovalShape28";
 			this->ovalShape28->Size = System::Drawing::Size(40, 40);
+			this->ovalShape28->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape25
 			// 
@@ -428,6 +442,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape25->Location = System::Drawing::Point(179, 293);
 			this->ovalShape25->Name = L"ovalShape25";
 			this->ovalShape25->Size = System::Drawing::Size(40, 40);
+			this->ovalShape25->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape26
 			// 
@@ -437,6 +452,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape26->Location = System::Drawing::Point(229, 293);
 			this->ovalShape26->Name = L"ovalShape26";
 			this->ovalShape26->Size = System::Drawing::Size(40, 40);
+			this->ovalShape26->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape27
 			// 
@@ -446,6 +462,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape27->Location = System::Drawing::Point(279, 293);
 			this->ovalShape27->Name = L"ovalShape27";
 			this->ovalShape27->Size = System::Drawing::Size(40, 40);
+			this->ovalShape27->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape24
 			// 
@@ -455,6 +472,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape24->Location = System::Drawing::Point(129, 293);
 			this->ovalShape24->Name = L"ovalShape24";
 			this->ovalShape24->Size = System::Drawing::Size(40, 40);
+			this->ovalShape24->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape23
 			// 
@@ -464,6 +482,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape23->Location = System::Drawing::Point(79, 293);
 			this->ovalShape23->Name = L"ovalShape23";
 			this->ovalShape23->Size = System::Drawing::Size(40, 40);
+			this->ovalShape23->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape22
 			// 
@@ -473,6 +492,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape22->Location = System::Drawing::Point(29, 293);
 			this->ovalShape22->Name = L"ovalShape22";
 			this->ovalShape22->Size = System::Drawing::Size(40, 40);
+			this->ovalShape22->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape8
 			// 
@@ -482,7 +502,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape8->Location = System::Drawing::Point(29, 393);
 			this->ovalShape8->Name = L"ovalShape8";
 			this->ovalShape8->Size = System::Drawing::Size(40, 40);
-			this->ovalShape8->Click += gcnew System::EventHandler(this, &viergewinntForm::ovalShape8_Click);
+			this->ovalShape8->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape9
 			// 
@@ -492,6 +512,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape9->Location = System::Drawing::Point(79, 393);
 			this->ovalShape9->Name = L"ovalShape9";
 			this->ovalShape9->Size = System::Drawing::Size(40, 40);
+			this->ovalShape9->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape10
 			// 
@@ -501,6 +522,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape10->Location = System::Drawing::Point(129, 393);
 			this->ovalShape10->Name = L"ovalShape10";
 			this->ovalShape10->Size = System::Drawing::Size(40, 40);
+			this->ovalShape10->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape13
 			// 
@@ -510,6 +532,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape13->Location = System::Drawing::Point(279, 393);
 			this->ovalShape13->Name = L"ovalShape13";
 			this->ovalShape13->Size = System::Drawing::Size(40, 40);
+			this->ovalShape13->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape12
 			// 
@@ -519,6 +542,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape12->Location = System::Drawing::Point(229, 393);
 			this->ovalShape12->Name = L"ovalShape12";
 			this->ovalShape12->Size = System::Drawing::Size(40, 40);
+			this->ovalShape12->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape11
 			// 
@@ -528,6 +552,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape11->Location = System::Drawing::Point(179, 393);
 			this->ovalShape11->Name = L"ovalShape11";
 			this->ovalShape11->Size = System::Drawing::Size(40, 40);
+			this->ovalShape11->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape14
 			// 
@@ -537,6 +562,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape14->Location = System::Drawing::Point(329, 393);
 			this->ovalShape14->Name = L"ovalShape14";
 			this->ovalShape14->Size = System::Drawing::Size(40, 40);
+			this->ovalShape14->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape7
 			// 
@@ -546,7 +572,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape7->Location = System::Drawing::Point(329, 443);
 			this->ovalShape7->Name = L"ovalShape7";
 			this->ovalShape7->Size = System::Drawing::Size(40, 40);
-			this->ovalShape7->Click += gcnew System::EventHandler(this, &viergewinntForm::ovalShape7_Click);
+			this->ovalShape7->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape4
 			// 
@@ -556,7 +582,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape4->Location = System::Drawing::Point(179, 443);
 			this->ovalShape4->Name = L"ovalShape4";
 			this->ovalShape4->Size = System::Drawing::Size(40, 40);
-			this->ovalShape4->Click += gcnew System::EventHandler(this, &viergewinntForm::ovalShape4_Click_2);
+			this->ovalShape4->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape5
 			// 
@@ -566,7 +592,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape5->Location = System::Drawing::Point(229, 443);
 			this->ovalShape5->Name = L"ovalShape5";
 			this->ovalShape5->Size = System::Drawing::Size(40, 40);
-			this->ovalShape5->Click += gcnew System::EventHandler(this, &viergewinntForm::ovalShape5_Click);
+			this->ovalShape5->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape6
 			// 
@@ -576,7 +602,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape6->Location = System::Drawing::Point(279, 443);
 			this->ovalShape6->Name = L"ovalShape6";
 			this->ovalShape6->Size = System::Drawing::Size(40, 40);
-			this->ovalShape6->Click += gcnew System::EventHandler(this, &viergewinntForm::ovalShape6_Click);
+			this->ovalShape6->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape3
 			// 
@@ -586,7 +612,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape3->Location = System::Drawing::Point(129, 443);
 			this->ovalShape3->Name = L"ovalShape3";
 			this->ovalShape3->Size = System::Drawing::Size(40, 40);
-			this->ovalShape3->Click += gcnew System::EventHandler(this, &viergewinntForm::ovalShape3_Click);
+			this->ovalShape3->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape2
 			// 
@@ -596,7 +622,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape2->Location = System::Drawing::Point(79, 443);
 			this->ovalShape2->Name = L"ovalShape2";
 			this->ovalShape2->Size = System::Drawing::Size(40, 40);
-			this->ovalShape2->Click += gcnew System::EventHandler(this, &viergewinntForm::ovalShape2_Click);
+			this->ovalShape2->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// ovalShape1
 			// 
@@ -608,7 +634,7 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 			this->ovalShape1->Name = L"ovalShape1";
 			this->ovalShape1->SelectionColor = System::Drawing::SystemColors::ActiveBorder;
 			this->ovalShape1->Size = System::Drawing::Size(40, 40);
-			this->ovalShape1->Click += gcnew System::EventHandler(this, &viergewinntForm::ovalShape1_Click);
+			this->ovalShape1->Click += gcnew System::EventHandler(this, &viergewinntForm::shape_Click);
 			// 
 			// newGameBnt
 			// 
@@ -683,87 +709,13 @@ private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 
 		}
 #pragma endregion
-private: System::Void ovalShape2_Click(System::Object^  sender, System::EventArgs^  e) {
-			 if(getPlayer() == "Red"){
-				 ovalShape2->FillColor = System::Drawing::Color::Red;
-			 } else
-				 ovalShape2->FillColor = System::Drawing::Color::Yellow;
-		 }
-private: System::Void ovalShape4_Click(System::Object^  sender, System::EventArgs^  e) {
-		 }
-private: System::Void viergewinntForm_Load(System::Object^  sender, System::EventArgs^  e) {
-		 }
-private: System::Void exitBtn_Click(System::Object^  sender, System::EventArgs^  e) {
-			 Application::Exit();
-		 }
-private: System::Void ovalShape1_Click(System::Object^  sender, System::EventArgs^  e) {
-			 if(getPlayer() == "Red"){
-				 ovalShape1->FillColor = System::Drawing::Color::Red;
-			 } else
-				 ovalShape1->FillColor = System::Drawing::Color::Yellow;
-		 }
-private: System::Void newGameBnt_Click(System::Object^  sender, System::EventArgs^  e) {
 
-		 }
-
-virtual std::string getPlayer()
-{	
-	int chooseColor;
-
-	chooseColor = game->setPlayer(0);
-	if(chooseColor){
-		return "Red";
-	} else {
-		return "Yellow";
-	}
-}
-virtual void newGame()
-{
-	game->setPlayer(1);
-}
-
-private: System::Void ovalShape3_Click(System::Object^  sender, System::EventArgs^  e) {
-			  if(getPlayer() == "Red"){
-				 ovalShape3->FillColor = System::Drawing::Color::Red;
-			 } else
-				 ovalShape3->FillColor = System::Drawing::Color::Yellow;
-		 }
-private: System::Void ovalShape4_Click_1(System::Object^  sender, System::EventArgs^  e) {
-			if(getPlayer() == "Red"){
-				 ovalShape4->FillColor = System::Drawing::Color::Red;
-			 } else
-				 ovalShape4->FillColor = System::Drawing::Color::Yellow;
-		 }
-private: System::Void ovalShape5_Click(System::Object^  sender, System::EventArgs^  e) {
-			 if(getPlayer() == "Red"){
-				 ovalShape5->FillColor = System::Drawing::Color::Red;
-			 } else
-				 ovalShape5->FillColor = System::Drawing::Color::Yellow;
-		 }
-private: System::Void ovalShape6_Click(System::Object^  sender, System::EventArgs^  e) {
-			 if(getPlayer() == "Red"){
-				 ovalShape6->FillColor = System::Drawing::Color::Red;
-			 } else
-				 ovalShape6->FillColor = System::Drawing::Color::Yellow;
-		 }
-private: System::Void ovalShape7_Click(System::Object^  sender, System::EventArgs^  e) {
-			 if(getPlayer() == "Red"){
-				 ovalShape7->FillColor = System::Drawing::Color::Red;
-			 } else
-				 ovalShape7->FillColor = System::Drawing::Color::Yellow;
-		 }
-private: System::Void ovalShape8_Click(System::Object^  sender, System::EventArgs^  e) {
-			 if(getPlayer() == "Red"){
-				 ovalShape8->FillColor = System::Drawing::Color::Red;
-			 } else
-				 ovalShape8->FillColor = System::Drawing::Color::Yellow;
-		 }
-private: System::Void ovalShape4_Click_2(System::Object^  sender, System::EventArgs^  e) {
-			 if(getPlayer() == "Red"){
-				 ovalShape4->FillColor = System::Drawing::Color::Red;
-			 } else
-				 ovalShape4->FillColor = System::Drawing::Color::Yellow;
-		 }
-};
+	private: System::Void viergewinntForm_Load(System::Object^  sender, System::EventArgs^  e);
+	private: System::Void exitBtn_Click(System::Object^  sender, System::EventArgs^  e);
+	private: System::Void newGameBnt_Click(System::Object^  sender, System::EventArgs^  e);
+	private: virtual std::string getPlayer();
+	private: virtual void newGame();
+	private: System::Void shape_Click(System::Object^  sender, System::EventArgs^  e);
+	};
 }
 

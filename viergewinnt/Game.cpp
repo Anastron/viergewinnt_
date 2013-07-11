@@ -1,31 +1,16 @@
 #include "Game.h"
 
-int i;
-
 Game::Game(void)
 {
+	currPlayer = false;
 }
 
-int Game::choosePlayer(int newGame)
+void Game::switchPlayer()
 {
-	
-	if(newGame){
-		i++;
-		return i;
-	} else if(i == 1){
-		i--;
-		return 0;
-	} else if(i == 0){
-		i++;
-		return 1;
-	}
+	currPlayer = ! currPlayer;
 }
 
-int Game::setPlayer(int newGame)
+bool Game::getPlayer()
 {
-	int choosenPlayer;
-
-	choosenPlayer = choosePlayer(newGame);
-
-	return choosenPlayer;
+	return currPlayer;
 }
